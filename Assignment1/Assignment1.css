@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Times;
+}
+li {
+    padding: 2px 0;
+}
+ 
+body {
+    background-color: rgb(228, 255, 255);
+    width: 100vw;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 15px 0;
+    
+    display: grid;
+    grid-template-columns: 1.5fr 9fr 1.5fr;
+    grid-template-rows: max-content max-content max-content;
+    row-gap: 15px;
+    grid-template-areas: 
+    ". Head ."
+    ". Main ."
+    ". Foot .";
+}
+.Head {
+    grid-area: Head;
+
+    background-color: rgb(41, 59, 59);
+    color: white;
+
+    font-style: oblique;
+
+    box-sizing: border-box;
+    padding: 100px 150px;
+
+    border-radius: 15px;
+    overflow: hidden;
+}
+.Main {
+    grid-area: Main;
+
+    background-color: white;
+    color: rgb(41, 59, 59);
+
+    box-sizing: border-box;
+    padding: 100px 150px;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 10px;
+}
+.Foot {
+    grid-area: Foot;
+
+    background-color: rgb(41, 59, 59);
+    color: white;
+
+    font-style: oblique;
+    font-size: 20px;
+
+    box-sizing: border-box;
+    padding: 75px 150px;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* Header */
+h1 {
+    font-size: 50px;
+}
+#SubTitle {
+    font-size: 20px;
+}
+#pfp-Box {
+    width: 150px;
+    height: 300px;
+
+    border-radius: 12px;
+    overflow: hidden;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+}
+#pfp {
+    margin: auto auto;
+    width: 150px;
+}
+@media screen and (max-width: 1420px) {
+    #pfp-Box {
+        width: 100px;
+        height: 200px;
+    }
+    #pfp {
+        width: 100px;
+    }
+}
+@media screen and (min-width: 1240px) {
+    .Head {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: Center;
+        gap: 70px;
+    }
+
+}
+@media screen and (max-width: 1240px) {
+    #pfp-Box {
+        width: 0;
+        height: 0;
+        border-width: 0;
+    }
+}
+@media screen and (max-width: 1010px) {
+    .Head {
+        padding: 60px 75px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    #SubTitle {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 770px) {
+    h1 {
+        font-size: 20px;
+    }
+    #SubTitle {
+        font-size: 10px;
+    }
+}
+
+/* body */
+.SubHeading {
+    font-size: 30px;
+}
+.Paragraph {
+    font-size: 20px;
+    padding: 15px 0;
+}
+#Intro {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px; 
+}
+#Intro-Image {
+    width: 400px;
+    height: 300px;
+    
+    border-radius: 12px;
+}
+.Image-Space {
+    background-color: rgb(41, 59, 59);
+    
+    width: fit-content;
+    height: fit-content;
+    
+    margin: 20px 0;
+    padding: 15px 15px;
+    
+    border-radius: 15px;
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.YT-Link-Size {
+    width: 200px;
+    height: 150px;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    
+    transition: filter 0.5s;
+}
+.YT-Link-Size:hover {
+    filter: drop-shadow(0 0 5px rgb(228, 255, 255));
+}
+.Band-Image-Size {
+    height: 150px;
+}
+.List-Heading {
+    padding: 100px 0;
+}
+.List-Space {
+    padding-left: 20px;
+}
+#Class-Program-Box {
+    width: 100%;
+    
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 30%;
+}
+@media screen and (max-width: 1600px) {
+    #Intro {
+        flex-wrap: wrap; 
+    }  
+}
+@media screen and (max-width: 1010px) {
+    .Main {
+        padding: 60px 75px;
+    }
+    .SubHeading {
+        font-size: 20px;
+    }
+    .Paragraph {
+        font-size: 10px;
+        padding: 7px 0;
+    }
+    #Intro-Image {
+        width: 200px;
+        height: 150px;
+        
+        border-radius: 7px;
+    }
+    .Image-Space {
+        margin: 7px 0;
+        padding: 7px 7px;
+        
+        border-radius: 7px;
+        overflow: hidden;
+        
+        gap: 7px;
+    }
+    .YT-Link-Size {
+        width: 100px;
+        height: 75px;
+        
+        border-radius: 5px;
+    }
+    .YT-Link-Size:hover {
+        filter: drop-shadow(0 0 5px rgb(228, 255, 255));
+    }
+    .Band-Image-Size {
+        height: 75px;
+    }
+}
+
+/* footer */
+#Contact-Box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+#IconFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+#Github-Icon {
+    width: 75px;
+    height: 75px;
+
+    transition: filter 0.5s;
+}
+#Github:Hover {
+    filter: drop-shadow(0 0 10px rgb(228, 255, 255));
+}
+#YouTube-Icon {
+    width: 100px;
+    height: 100px;
+
+    transition: filter 0.5s;
+}
+#YouTube:hover {
+    filter: drop-shadow(0 0 10px rgb(228, 255, 255));
+}
+@media screen and (max-width: 1010px) {
+    .Foot {
+        padding: 50px 75px;
+    }
+    #Contact-Box {
+        gap: 7px;
+    }
+    #IconFlex {
+        gap: 30px;
+    }
+    #Github {
+        width: 50px;
+        height: 50px;
+    }
+    #Github:Hover {
+        filter: drop-shadow(0 0 7px rgb(228, 255, 255));
+    }
+    #YouTube {
+        width: 75px;
+        height: 75px;
+    }
+    #YouTube:hover {
+        filter: drop-shadow(0 0 7px rgb(228, 255, 255));
+    }
+}
+@media screen and (max-width: 770px) {
+    #Contact-Box {
+        gap: 4px;
+    }
+    #IconFlex {
+        gap: 20px;
+    }
+    #Github-Icon {
+        width: 40px;
+        height: 40px;
+    }
+    #Github-Icon:Hover {
+        filter: drop-shadow(0 0 4px rgb(228, 255, 255));
+    }
+    #YouTube-Icon {
+        width: 50px;
+        height: 50px;
+    }
+    #YouTube-Icon:hover {
+        filter: drop-shadow(0 0 4px rgb(228, 255, 255));
+    }
+}
+
